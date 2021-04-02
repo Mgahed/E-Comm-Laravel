@@ -1,0 +1,32 @@
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    display: none;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    display: none;
+}
+
+.custom-switch .custom-control-label::before {
+    display: none;
+}
+
+.custom-switch .custom-control-label::after {
+    display: none;
+}
+
+/*My Css*/
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.card-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.content{
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
