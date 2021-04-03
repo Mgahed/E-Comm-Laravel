@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
     <div class="products-home">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel"
+        <div id="carouselExampleFade" class="carousel slide" data-ride="carousel"
              style="margin-top: -9px;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -31,18 +31,18 @@
         </div>
         <div class="container mt-5">
             <div class="row">
-                <div class="col-md-4 mb-5">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                @foreach ($products as $product)
+                    <div class="col-md-4 mb-5">
+                        <div class="card" style="width: 100%;">
+                            <img style="height:250px;" class="card-img-top" src="{{$product->gallery}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$product->name}}</h5>
+                                <p class="card-text">{{$product->description}}</p>
+                                <a href="#" class="btn btn-primary">Add to cart <i class='fas fa-cart-plus'></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

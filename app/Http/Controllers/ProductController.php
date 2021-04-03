@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+
 class ProductController extends Controller
 {
     public function index()
     {
-        return view('products.home');
+        $products=Product::all();
+        return view('products.home',compact('products'));
     }
 }
