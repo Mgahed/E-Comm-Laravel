@@ -6,6 +6,6 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return "session()->get('user')";
+        return view('products.home');
     }
 }

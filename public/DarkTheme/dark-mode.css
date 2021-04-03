@@ -14,3 +14,8 @@
 [data-theme="dark"] .bg-black {
   background-color: #eee !important;
 }
+
+[data-theme="dark"] .card{
+    background-color: #1a232f !important;
+    color: #eee;
+}
