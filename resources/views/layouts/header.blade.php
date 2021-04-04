@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <span class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item {{Request::path() == 'products' ? 'active' : ''}}">
                 <a class="nav-link" href="{{route('products_home')}}">Home</a>
@@ -13,6 +13,9 @@
 {{--            <li class="nav-item ">--}}
 {{--                <a class="nav-link" href="">Add</a>--}}
 {{--            </li>--}}
+            <li class="nav-item">
+                <a class="nav-link" href="">Cart(<span class="cart-number"></span>)</a>
+            </li>
             @if (Request::path() == 'products'||Request::path() == 'products/search')
                 <li class="nav-item search-nav-text {{Request::path() == 'products/search' ? 'active' : ''}}" onclick="display_search()" style="cursor:pointer;">
                     <a class="nav-link">search</a>
@@ -35,3 +38,24 @@
         </ul>
     </div>
 </nav>
+<script>
+    $.ajax({
+        type: 'get',
+        // enctype: 'multipart/form-data',
+        url: '{{route("get_from_cart")}}',
+        processData: false,
+        contentType: false,
+        cache: false,
+        success: function (data) {
+            // if (data.status==false){
+                $('.cart-number').html(data);
+            // }
+            console.log(data);
+            // }
+        },
+        error: function (reject) {
+            var a_errors = reject.responseJSON.errors;
+            console.log(a_errors);
+        },
+    });
+</script>

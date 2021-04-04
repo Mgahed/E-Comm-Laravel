@@ -30,3 +30,25 @@ function display_search() {
     $('.search-nav-form').show('slow');
 
 }
+
+// inc-dec
+$('#plus').click(function add() {
+    var $qtde = $("#quantity");
+    var a = $qtde.val();
+
+    a++;
+    $("#minus").attr("disabled", !a);
+    $qtde.val(a);
+});
+$("#minus").attr("disabled", !$("#quantity").val());
+
+$('#minus').click(function minusButton() {
+    var $qtde = $("#quantity");
+    var b = $qtde.val();
+    if (b > 1) {
+        b--;
+        $qtde.val(b);
+    } else {
+        $("#minus").attr("disabled", true);
+    }
+});

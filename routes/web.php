@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use \App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return redirect()->route('login_form');
+    return redirect()->route('products_home');
 });
 
 Route::get('/login', function () {
@@ -34,4 +35,9 @@ Route::group(['prefix' => 'products'], function () {
     Route::get('/', [ProductController::class, 'index'])->name('products_home');
     Route::get('details/{id}', [ProductController::class, 'details'])->name('product_details');
     Route::get('search', [ProductController::class, 'search'])->name('product_search');
+    Route::post('add-to-cart', [ProductController::class, 'add_to_cart'])->name('product_add_to_cart');
+});
+
+Route::group(['prefix' => 'cart'], function () {
+    Route::get('count', [CartController::class, 'cart_count'])->name('get_from_cart');
 });

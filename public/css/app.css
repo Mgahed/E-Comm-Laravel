@@ -79,4 +79,67 @@ a:hover{
 .search-nav-form{
     display: none;
 }
+/*inc dec*/
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 
+body .container .product-counter {
+    width: 300px;
+    display: inline-block;
+}
+body .container #quantity {
+    font-family: "Abril Fatface", cursive;
+    font-weight: bold;
+    outline-style: none;
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    margin-left: -4px;
+    position: relative;
+    top: -5.5px;
+    padding: 0 10px;
+    background: #343A40;
+    border: none;
+    color: #d0fcfb;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+body .container input[type=button].plus-minus {
+    background-color: #343A40;
+    cursor: pointer;
+    outline-style: none;
+    width: 50px;
+    height: 30px;
+    border: 0;
+    color: #d0fcfb;
+    text-align: center;
+    line-height: 26px;
+    font-size: 36px;
+    font-family: "Dosis", sans-serif;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+body .container input[type=button]#minus {
+    border-radius: 10px 0 0 10px;
+}
+body .container input[type=button]#plus {
+    border-radius: 0 10px 10px 0;
+    margin-left: -5px;
+}
+body .container input#total-price {
+    font-family: "Abril Fatface", cursive;
+    font-size: 60px;
+    width: 249px;
+    border: 0;
+    color: #343A40;
+    background-color: #fdc9a2;
+}
+body .container .skuBestPrice {
+    font-family: "Abril Fatface", cursive;
+}
