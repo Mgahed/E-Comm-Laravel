@@ -33,14 +33,22 @@
             <div class="row">
                 @foreach ($products as $product)
                     <div class="col-md-4 mb-5">
-                        <div class="card" style="width: 100%;">
-                            <img style="height:250px;" class="card-img-top" src="{{$product->gallery}}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$product->name}}</h5>
-                                <p class="card-text">{{$product->description}}</p>
-                                <a href="#" class="btn btn-primary">Add to cart <i class='fas fa-cart-plus'></i></a>
+                        <a href="{{route('product_details',$product->id)}}">
+                            <div class="overlay">
+                                <div class="card" style="width: 100%;">
+                                    <img style="height:250px;" class="card-img-top" src="{{$product->gallery}}"
+                                         alt="Card image cap">
+                                    <div class="middle">
+                                        <div class="btn btn-outline-secondary" style="font-weight:900;">View Details</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{$product->name}}</h5>
+                                        <p class="card-text">{{$product->description}}</p>
+                                        <a href="#" class="btn btn-primary">Add to cart <i class='fas fa-cart-plus'></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>

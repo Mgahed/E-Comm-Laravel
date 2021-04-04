@@ -32,4 +32,6 @@ Route::group(['prefix' => 'user'], function () {
 
 Route::group(['prefix' => 'products'], function () {
     Route::get('/', [ProductController::class, 'index'])->name('products_home');
+    Route::get('details/{id}', [ProductController::class, 'details'])->name('product_details');
+    Route::get('search', [ProductController::class, 'search'])->name('product_search');
 });

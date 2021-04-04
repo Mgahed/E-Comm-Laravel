@@ -13,6 +13,16 @@
 {{--            <li class="nav-item ">--}}
 {{--                <a class="nav-link" href="">Add</a>--}}
 {{--            </li>--}}
+            @if (Request::path() == 'products'||Request::path() == 'products/search')
+                <li class="nav-item search-nav-text {{Request::path() == 'products/search' ? 'active' : ''}}" onclick="display_search()" style="cursor:pointer;">
+                    <a class="nav-link">search</a>
+                </li>
+                <form method="get" action="{{route('product_search')}}" class="form-inline my-2 my-lg-0 search-nav-form">
+                    @csrf
+                    <input class="form-control mr-sm-2" name="ser" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            @endif
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <div class="nav-item custom-control custom-switch">

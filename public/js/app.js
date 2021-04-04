@@ -22,4 +22,11 @@ $(document).ready(function () {
             theme();
         }, 50);
     });
+
 });
+
+function display_search() {
+    $('.search-nav-text').hide('slow');
+    $('.search-nav-form').show('slow');
+
+}

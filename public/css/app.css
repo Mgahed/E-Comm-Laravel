@@ -15,6 +15,10 @@
 }
 
 /*My Css*/
+a:hover{
+    text-decoration: none !important;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -47,5 +51,32 @@
 
 .card{
     background-color: #f6f6f7;
+}
+
+/*card hovar*/
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay:hover img {
+    opacity: 0.1;
+}
+
+.overlay:hover .middle {
+    opacity: 10;
+}
+.img-details{
+    height: 200px;
+}
+
+.search-nav-form{
+    display: none;
 }
 
