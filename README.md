@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-#Abdelrhman Mgahed
+# <p align="center">Abdelrhman Mgahed</p>
 
 ## About Laravel
 
