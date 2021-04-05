@@ -44,5 +44,7 @@ Route::group(['prefix' => 'products'], function () {
 });
 
 Route::group(['prefix' => 'cart'], function () {
+    Route::get('/', [CartController::class, 'cart_list'])->name('cart');
+    Route::get('/remove/{id}', [CartController::class, 'cart_remove'])->name('cart_remove');
     Route::get('count', [CartController::class, 'cart_count'])->name('get_from_cart');
 });

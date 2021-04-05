@@ -16,12 +16,13 @@
                     {{--                    increament decreament--}}
                     <form id="FormId">
                         @csrf
-                        <div class="product-container"></div>
-                        <div class="product-counter">
-                            <input id="minus" class="plus-minus" type="button" value="-"/>
-                            <input type="hidden" value="{{$product->id}}" name="product_id"/>
-                            <input id="quantity" type="text" value="1" name="quantity"/>
-                            <input id="plus" class="plus-minus" type="button" value="+"/>
+                        <div class="product-container">
+                            <div class="product-counter">
+                                <input class="plus-minus minus" type="button" value="-"/>
+                                <input type="hidden" value="{{$product->id}}" name="product_id"/>
+                                <input class="quantity" type="text" value="1" name="quantity"/>
+                                <input class="plus-minus plus" type="button" value="+"/>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -51,7 +52,7 @@
                 contentType: false,
                 cache: false,
                 success: function (data) {
-                    if (data.status==false){
+                    if (data.status == false) {
                         window.location.replace("{{route('login_form')}}");
                     }
                     console.log(data);

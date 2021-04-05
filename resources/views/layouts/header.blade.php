@@ -10,11 +10,8 @@
             <li class="nav-item {{Request::path() == 'products' ? 'active' : ''}}">
                 <a class="nav-link" href="{{route('products_home')}}">Home</a>
             </li>
-{{--            <li class="nav-item ">--}}
-{{--                <a class="nav-link" href="">Add</a>--}}
-{{--            </li>--}}
-            <li class="nav-item">
-                <a class="nav-link" href="">Cart(<span class="cart-number"></span>)</a>
+            <li class="nav-item {{Request::path() == 'cart' ? 'active' : ''}}">
+                <a class="nav-link" href="{{route('cart')}}">Cart(<span class="cart-number"></span>)</a>
             </li>
             @if (Request::path() == 'products'||Request::path() == 'products/search')
                 <li class="nav-item search-nav-text {{Request::path() == 'products/search' ? 'active' : ''}}" onclick="display_search()" style="cursor:pointer;">
@@ -46,7 +43,7 @@
             </li>
             <div class="nav-item custom-control custom-switch mt-2 ml-1">
                 <input type="checkbox" class="custom-control-input" id="darkSwitch"/>
-                <label style="right: 30px;" id="theme-switch" class="custom-control-label" for="darkSwitch"><i
+                <label style="right: 30px;" id="theme-switch" class="custom-control-label pointer" for="darkSwitch"><i
                         class='fas fa-sun' style='font-size:20px;color:#F5B212;'></i></label>
                 {{--                🌓--}}
             </div>

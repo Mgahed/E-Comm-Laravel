@@ -15,6 +15,7 @@
 }
 
 /*My Css*/
+.pointer {cursor: pointer;}
 a:hover{
     text-decoration: none !important;
 }
@@ -53,6 +54,10 @@ a:hover{
     background-color: #f6f6f7;
 }
 
+.Move-to-wish-list:hover{
+    color: #9d1a1a;
+}
+
 /*card hovar*/
 .middle {
     transition: .5s ease;
@@ -83,11 +88,11 @@ a:hover{
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 
-body .container .product-counter {
+body .product-container .product-counter {
     width: 300px;
     display: inline-block;
 }
-body .container #quantity {
+body .product-container .quantity {
     font-family: "Abril Fatface", cursive;
     font-weight: bold;
     outline-style: none;
@@ -107,7 +112,7 @@ body .container #quantity {
     -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-body .container input[type=button].plus-minus {
+body .product-container input[type=button].plus-minus {
     background-color: #343A40;
     cursor: pointer;
     outline-style: none;
@@ -125,14 +130,14 @@ body .container input[type=button].plus-minus {
     -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-body .container input[type=button]#minus {
+body .product-container input[type=button].minus {
     border-radius: 10px 0 0 10px;
 }
-body .container input[type=button]#plus {
+body .product-container input[type=button].plus {
     border-radius: 0 10px 10px 0;
     margin-left: -5px;
 }
-body .container input#total-price {
+body .product-container input.total-price {
     font-family: "Abril Fatface", cursive;
     font-size: 60px;
     width: 249px;
@@ -140,6 +145,6 @@ body .container input#total-price {
     color: #343A40;
     background-color: #fdc9a2;
 }
-body .container .skuBestPrice {
+body .product-container .skuBestPrice {
     font-family: "Abril Fatface", cursive;
 }

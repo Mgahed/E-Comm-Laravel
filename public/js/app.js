@@ -8,10 +8,10 @@ $(document).ready(function () {
 // `attr` is false.  Check for both.
         if (typeof attr !== 'undefined' && attr !== false) {
             $('#theme-switch').html('');
-            $('#theme-switch').append("<i class='fas fa-moon' style='font-size:20px;color:#FFF;'></i>").hide().fadeIn('300');
+            $('#theme-switch').append("<i class='fas fa-moon' style='font-size:20px;color:#FFF;'></i>");//.hide().fadeIn('300');
         } else {
             $('#theme-switch').html('');
-            $('#theme-switch').append("<i class='fas fa-sun' style='font-size:20px;color:#F5B212;'></i>").hide().fadeIn('300');
+            $('#theme-switch').append("<i class='fas fa-sun' style='font-size:20px;color:#F5B212;'></i>");//.hide().fadeIn('300');
         }
     }
 
@@ -32,23 +32,23 @@ function display_search() {
 }
 
 // inc-dec
-$('#plus').click(function add() {
-    var $qtde = $("#quantity");
-    var a = $qtde.val();
-
-    a++;
-    $("#minus").attr("disabled", !a);
-    $qtde.val(a);
-});
-$("#minus").attr("disabled", !$("#quantity").val());
-
-$('#minus').click(function minusButton() {
-    var $qtde = $("#quantity");
-    var b = $qtde.val();
-    if (b > 1) {
-        b--;
-        $qtde.val(b);
-    } else {
-        $("#minus").attr("disabled", true);
-    }
-});
+// $('#plus').click(function add() {
+//     var $qtde = $("#quantity");
+//     var a = $qtde.val();
+//
+//     a++;
+//     $("#minus").attr("disabled", !a);
+//     $qtde.val(a);
+// });
+// $("#minus").attr("disabled", !$("#quantity").val());
+//
+// $('#minus').click(function minusButton() {
+//     var $qtde = $("#quantity");
+//     var b = $qtde.val();
+//     if (b > 1) {
+//         b--;
+//         $qtde.val(b);
+//     } else {
+//         $("#minus").attr("disabled", true);
+//     }
+// });
