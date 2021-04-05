@@ -19,6 +19,11 @@ Route::get('/', function () {
     return redirect()->route('products_home');
 });
 
+Route::get('/logout', function () {
+    Session::forget('user');
+    return view('login');
+})->name('logout');
+
 Route::get('/login', function () {
     return view('login');
 })->name('login_form');

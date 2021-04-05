@@ -28,7 +28,23 @@
             @endif
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <div class="nav-item custom-control custom-switch">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @if (session()->has('user'))
+                        {{session()->get('user')['name']}}
+                    @else
+                        User
+                    @endif
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="transform: translateX(-20px);">
+                    @if (!session()->has('user'))
+                        <a class="dropdown-item" href="{{route('login_form')}}">Login</a>
+                    @else
+                        <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+                    @endif
+                </div>
+            </li>
+            <div class="nav-item custom-control custom-switch mt-2 ml-1">
                 <input type="checkbox" class="custom-control-input" id="darkSwitch"/>
                 <label style="right: 30px;" id="theme-switch" class="custom-control-label" for="darkSwitch"><i
                         class='fas fa-sun' style='font-size:20px;color:#F5B212;'></i></label>
@@ -49,9 +65,6 @@
         success: function (data) {
             // if (data.status==false){
                 $('.cart-number').html(data);
-            // }
-            console.log(data);
-            // }
         },
         error: function (reject) {
             var a_errors = reject.responseJSON.errors;

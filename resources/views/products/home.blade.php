@@ -44,7 +44,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$product->name}}</h5>
                                         <p class="card-text">{{$product->description}}</p>
-                                        <a href="#" class="btn btn-primary">Add to cart <i class='fas fa-cart-plus'></i></a>
+{{--                                        <a href="#" class="btn btn-primary">Add to cart <i class='fas fa-cart-plus'></i></a>--}}
                                     </div>
                                 </div>
                             </div>
