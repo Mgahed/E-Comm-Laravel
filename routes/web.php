@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use \App\Http\Controllers\CartController;
+use \App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,4 +48,9 @@ Route::group(['prefix' => 'cart'], function () {
     Route::get('/', [CartController::class, 'cart_list'])->name('cart');
     Route::get('/remove/{id}', [CartController::class, 'cart_remove'])->name('cart_remove');
     Route::get('count', [CartController::class, 'cart_count'])->name('get_from_cart');
+});
+
+Route::group(['prefix' => 'order'], function () {
+    Route::get('checkout', [OrderController::class, 'checkout_form'])->name('checkout_form');
+    Route::post('insert', [OrderController::class, 'insert_order'])->name('insert_order');
 });

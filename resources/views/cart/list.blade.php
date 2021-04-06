@@ -135,9 +135,9 @@
                             </div>
                         </div>
 
-                        <button type="button" class="btn btn-primary btn-block waves-effect waves-light">go to
+                        <a href="{{route('checkout_form')}}" class="btn btn-primary btn-block waves-effect waves-light">go to
                             checkout
-                        </button>
+                        </a>
 
                     </div>
                 </div>
